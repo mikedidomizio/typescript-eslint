@@ -14,6 +14,16 @@ foo('c', 'd');
       `,
       name: 'should pass if all primitive args used',
     },
+    {
+      code: `
+function foo(a: string, b: string) {}
+
+foo('c', 'd');
+
+foo('c');
+      `,
+      name: 'should pass if all primitive args used in at least one call',
+    },
   ],
   invalid: [
     {
